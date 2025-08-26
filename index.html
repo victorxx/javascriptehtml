@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela com Média</title>
+</head>
+<body>
+  <h2>Notas de Alunos</h2>
+  <table border="1" id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Nota</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const alunos = [
+      { nome: 'Lucas', nota: 9.0 },
+      { nome: 'Ana', nota: 5.5 },
+      { nome: 'João', nota: 6.8 },
+      { nome: 'Maria', nota: 4.3 }
+    ];
+
+    const tbody = document.querySelector("#tabela tbody");
+
+    alunos.forEach(aluno => {
+      const status = aluno.nota >= 6 ? 'Aprovado' : 'Reprovado';
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${aluno.nome}</td>
+        <td>${aluno.nota}</td>
+        <td>${status}</td>
+      `;
+      tbody.ap
