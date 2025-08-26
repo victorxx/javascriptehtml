@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela com JS</title>
+</head>
+<body>
+  <h2>Tabela Gerada com JavaScript</h2>
+  <table border="1" id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linhas serão inseridas aqui -->
+    </tbody>
+  </table>
+
+  <script>
+    const dados = [
+      { nome: 'Carlos', nota: 7.5 },
+      { nome: 'Fernanda', nota: 8.0 },
+      { nome: 'Paulo', nota: 9.1 }
+    ];
+
+    const corpo = document.querySelector("#tabela tbody");
+
+    dados.forEach(aluno => {
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${aluno.nome}</td>
+        <td>${aluno.nota}</td>
+      `;
+      corpo.appendChild(linha);
+    });
+  </script>
+</body>
+</html>
