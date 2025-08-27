@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <style>
+      table{
+        margin:20px auto;
+        width:50%;
+        text-align: center;
+      }
+      th,td{
+        text-align: center;
+        padding:30px;
+      }
+      th{
+        background-color: blue;
+      }
+      .aprovado{
+        background-color: blue;
+      }
+      .reprovado{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" id="janela">
+      <thead>
+        <tr>
+          <th>nome</th>
+          <th>nota</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <script>
+        const alunos = [
+      { nome: 'Lucas', nota: 9.0 },
+      { nome: 'Ana', nota: 5.5 },
+      { nome: 'João', nota: 6.8 },
+      { nome: 'Maria', nota: 4.3 },
+      { nome: 'Carlos', nota: 7.5 },
+      { nome: 'Fernanda', nota: 3.0 },
+      { nome: 'Pedro', nota: 10.0 },
+      { nome: 'Juliana', nota: 5.9 }
+    ];
+       let tbody=document.querySelector('#janela tbody');
+       alunos.forEach(aluno=>{
+        let status=aluno.nota>6?'aprovado':'reprovado';
+        let linha=document.createElement('tr');
+        linha.className=aluno.nota>6?'aprovado':'reprovado';
+        linha.innerHTML=`
+        
+        <td>${aluno.nome}</td>
+        <td>${aluno.nota}</td>
+        <td>${status}</td>
+        `;
+        tbody.appendChild(linha);
+       });
+
+        </script>
+      </tbody>
+    </table>
+  </body>
+</html>
