@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <style>
+      table{
+        width:90%;
+        text-align: center;
+        margin:20px auto;
+
+      }
+      th,td{
+        font-size: 20px;
+        padding:20px;
+        font-size: 30px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .morto{
+        background-color:red;
+
+      }
+      .vivo{
+        background-color:green;
+      }
+    </style>
+
+  </head>
+  <body>
+    <table border="1" id="janela">
+      <thead>
+        <tr>
+          <th>nome</th><th>idade</th><th>situacao</th>
+        </tr>
+      </thead>
+      <tbody>
+<script>
+  let dados=[
+    {nome:'rodrigo',idade:32},
+    {nome:'renata',idade:200},
+    {nome:'sandro',idade:12}
+  ];
+  let corpo=document.querySelector('#janela tbody');
+  dados.forEach(dado=>{
+  let situacao=dado.idade<130?'esta vivo':'morto';
+
+  let linha=document.createElement('tr');
+  linha.className = dado.idade < 130 ? 'vivo' : 'morto';
+  linha.innerHTML=`<td>${dado.nome}</td><td>${dado.idade}</td><td>${situacao}</td>`;
+  corpo.appendChild(linha);
+
+  });
+</script>
+      </tbody>
+    </table>
+  </body>
+</html>
