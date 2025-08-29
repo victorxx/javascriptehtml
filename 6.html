@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Carro Turbo: Notícias e Vídeos | Alta Performance em 4 Rodas</title>
+<meta name="description" content="Fique por dentro das últimas notícias sobre carros turbos, lançamentos, comparativos e vídeos incríveis de performance. Tudo sobre o mundo turbo em um só lugar." />
+<meta name="keywords" content="carro turbo, notícias carro turbo, vídeos carro turbo, motores turbinados, performance automotiva, carros esportivos, lançamentos turbo, tuning, velocidade, potência" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Jogos Retros, Arcades e Mais!" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Carro Turbo: Notícias e Vídeos | Alta Performance em 4 Rodas" />
+<meta property="og:description" content="As melhores notícias e vídeos sobre carros turbos. Explore o universo dos motores potentes e da velocidade com conteúdo atualizado e envolvente." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Turbocharger_Animation_by_Tyroola.gif/250px-Turbocharger_Animation_by_Tyroola.gif") ;    
+      background-position: center; 
+      background-repeat:no-repeat;  
+      background-size: 300px 300px;     /* Centraliza a imagem */
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      width: 100%;
+      max-width: 1100px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    #video {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    button#btn {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button#fezes{
+         background-color: #1e88e5;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#btn:disabled {
+      background-color: #666;
+      cursor: not-allowed;
+    }
+
+    button#btn:hover:not(:disabled) {
+      background-color: #1565c0;
+    }
+
+    footer {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: auto;
+      padding-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      iframe {
+        height: 180px;
+      }
+
+      button#btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔥Carro Turbo: Notícias e Vídeos  </h1>
+  </header>
+
+  <main>
+    <section id="video" aria-label="Galeria de vídeos do Rica Games">
+      <!-- Os vídeos serão carregados via JavaScript -->
+    </section>
+
+    <button id="btn" aria-label="Carregar mais vídeos">Carregar mais vídeos</button>
+    <br>
+    <br>
+    <br>
+   <button id="fezes" style="background-color: red; border: none; padding: 10px 20px; border-radius: 5px;">
+    <a id="credito" href="https://share.google/KWgHRCKwLAg6RZDzh" style="color: white; font-size: 18px; text-decoration: none;" >ESTÁ PRECISANDO DE CRÉDITO? SAIBA COMO +</a>
+  </button>
+  <br>
+  <br>
+  <br>
+   <button id="fezes" style="background-color: red; border: none; padding: 10px 20px; border-radius: 5px;">
+    <a id="larissa" href="https://share.google/GmZYgONVHIvptSwvv" style="color: white; font-size: 18px; text-decoration: none;">Dra Larissa Saib - Medicina Capilar & Estética</a>
+  </button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button id="fezes" style="background-color: red; border: none; padding: 10px 20px; border-radius: 5px;">
+    <a id="oportunidade" href="https://share.google/GmZYgONVHIvptSwvv" style="color: white; font-size: 18px; text-decoration: none;">FAZER RENDA EXTRA ? SAIBA COMO</a>
+  </button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button id="fezes" style="background-color: red; border: none; padding: 10px 20px; border-radius: 5px;">
+    <a id="oportunidade2" href="https://share.google/GmZYgONVHIvptSwvv" style="color: white; font-size: 18px; text-decoration: none;">🚨 OFERTA IMPERDÍVEL! 🚨
+    Não perca essa chance única de aproveitar o melhor com descontos incríveis!
+    🎯 É agora ou nunca! Garanta já o seu antes que acabe!</a>
+      </button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button id="fezes" style="background-color: yellow; border: none; padding: 10px 20px; border-radius: 5px;">
+    <a id="oportunidade3" href="https://espiritosantoes-com-brprincipal.pages.dev/vps01" style="color: black; font-size: 18px; text-decoration: none;">
+      🎯 Servidores VPS potentes e com suporte brasileiro. Ideal para quem busca estabilidade e preço justo com suporte técnico ágil. 🎯
+      🎯 É agora ou nunca!🎯</a>
+      </button>
+  <br>
+  <br>
+  <br>
+  <br>
+
+   
+  </main>
+
+  <footer>
+    &copy;|🔥Carro Turbo: Notícias e Vídeos 
+    <a href="https://espiritosantoes-com-brprincipal.pages.dev/sitemap">MAPA</a>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    let indexe = 0;
+const limiteporvez = 1;
+const resultado = document.getElementById('video');
+const botao = document.getElementById('btn');
+let contador = 0;
+const videos = [
+
+
+];
+
+function criaIframe(src, width = 300, height = 300) {
+  const iframe = document.createElement('iframe');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allowfullscreen', '');
+  return iframe;
+}
+
+botao.onclick = function () {
+  let final = indexe + limiteporvez;
+
+  for (; indexe < final && indexe < videos.length; indexe++) {
+    contador++;
+
+    // cria e adiciona o vídeo
+    let iframe = criaIframe(videos[indexe]);
+    resultado.appendChild(iframe);
+
+    if (contador === 4) {
+      // Anúncio para contador 1
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <iframe src="https://sistema01.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://sistema01.pages.dev/" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a> 
+        <br>
+        <br>
+        <iframe src="https://espiritosantoes-com-brprincipal.pages.dev/vps01" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://espiritosantoes-com-brprincipal.pages.dev/vps01" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a>
+        <br>
+        <br>
+        <iframe src="https://imagemprog.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://imagemprog.pages.dev/" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a>
+
+      `;
+      resultado.appendChild(div);
+      
+    } 
+
+    if (contador === 5) {
+      // Anúncio para contador 1
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <iframe src="https://conteudo01.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://conteudo01.pages.dev/" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a> 
+        <br>
+        <br>
+         <iframe src="https://espiritosantoes-com-brprincipal.pages.dev/12" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://espiritosantoes-com-brprincipal.pages.dev/12" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a> 
+        <br>
+        <br>
+      `;
+      resultado.appendChild(div);
+      contador=0;
+    } 
+
+    if (contador === 1) {
+      // Anúncio para contador 1
+      const div = document.createElement('div');
+      div.innerHTML = `
+       <iframe src="https://social-5rp.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://social-5rp.pages.dev/" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a> 
+        <br>
+        <br>
+        <iframe src="https://uteis01.pages.dev/servicobancario" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+        <a href="https://uteis01.pages.dev/servicobancario" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a> 
+        <br>
+        <br>
+        <br>
+                <iframe src="https://espiritosantoes-com-brprincipal.pages.dev/vps01" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://espiritosantoes-com-brprincipal.pages.dev/vps01" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a>
+        <br>
+        <br>
+        <iframe src="https://imagemprog.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+          <a href="https://imagemprog.pages.dev/" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a>
+      `;
+      resultado.appendChild(div);
+    
+    } 
+    
+    else if (contador === 2) {
+      // Anúncio para contador 2 (diferente do 1)
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <iframe src="https://encurtadorko.pages.dev/" width="350" height="500" frameborder="0" allowfullscreen></iframe>
+        <a href="http://www.espiritosanto-es.com.br/cloudflare" 
+          style="display: inline-block; background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+          ABRIR TELA CHEIA
+        </a>
+
+      `;
+      resultado.appendChild(div);
+       // reseta contador depois do 2
+    }
+  }
+
+  if (indexe >= videos.length) {
+    botao.disabled = true;
+    botao.textContent = 'Chegamos no limite já';
+  }
+};
+</script>
+<script>
+  let urlslarissa = [
+    "https://share.google/GmZYgONVHIvptSwvv",
+    "https://www.larissasaib.com.br/",
+    "https://ig.rdstation.com/dralarissasaib",
+    "https://www.doctoralia.com.br/larissa-goes-duarte-saib/dermatologista/sao-paulo"
+  ];
+  let indexLarissa = Math.floor(Math.random() * urlslarissa.length);
+  let larissa = document.getElementById('larissa');
+  larissa.href = urlslarissa[indexLarissa];
+</script>
+
+<script>
+  let urlscredito = [
+    "https://share.google/KWgHRCKwLAg6RZDzh",
+    "https://www.geocredibnk.com.br/",
+    "https://www.instagram.com/geocredibnkvitoria/",
+    "https://wa.me/27997269454",
+    "https://uteis01.pages.dev/servicobancario",
+    "https://novorepositorio.pages.dev/credito"
+
+  ];
+  let indexCredito = Math.floor(Math.random() * urlscredito.length);
+  let credito = document.getElementById('credito');
+  credito.href = urlscredito[indexCredito];
+</script>
+<script>
+  let oportunidadeurls = [
+    "https://airbnbn3.pages.dev/",
+    "https://br.pinterest.com/pin/546835579793085353/",
+    "https://br.pinterest.com/pin/546835579793036955/",
+    "https://refadav.com/?ref=Kt5Cug_KFFFDTyShljj9ScDkqv0FY5tK",
+  ];
+  let indexoportunidade = Math.floor(Math.random() * oportunidadeurls.length);
+  let oportunidade = document.getElementById('oportunidade');
+  oportunidade.href = oportunidadeurls[indexoportunidade];
+</script>
+<script>
+  //PRODUTOSPARAVENDER
+  let oportunidadeurls2 = [
+    "https://espiritosantoes-com-brprincipal.pages.dev/12",
+    "https://uteis01.pages.dev/servicobancario",
+    "https://espiritosantoes-com-brprincipal.pages.dev/vps01",
+    "https://hostinger.com.br/?REFERRALCODE=SSNVICTORXU8",
+    "https://central.dokehost.com.br/aff.php?aff=90",
+    "https://modeloanuncio01.pages.dev/",
+    "https://imagemprog.pages.dev/",
+    "https://espiritosantoes-com-brprincipal.pages.dev/",
+    "https://uteis01.pages.dev/servicobancario"
+
+
+  ];
+  let indexoportunidade2 = Math.floor(Math.random() * oportunidadeurls2.length);
+  let oportunidade2 = document.getElementById('oportunidade2');
+  oportunidade2.href = oportunidadeurls2[indexoportunidade2];
+</script>
+</body>
+</html>
