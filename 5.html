@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <style>
+      table{
+        width:90%;
+        margin:20px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,td{
+        border:1px solid #333;
+        padding:20px;
+        font-size: 50px;
+      }
+      .vivo{
+        background-color:green;
+      }
+      .morto{
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="mostrardados" style="text-align: center; margin-top: 20px;">
+      <button id="btntodos">mostra todos</button>
+      <button id="btnhomem">mostrar apenas homens</button>
+      <button id="btnmulher">mostrar apenas mulheres</button>
+      <table border="1" id="janela">
+        <thead><tr><th>nome</th><th>idade</th><th>sexo</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <script>
+        let dados=[
+        {nome:'rodrigo',idade:23,sexo:'M'},
+        {nome:'tiafo',idade:33,sexo:'M'},
+        {nome:'maria',idade:33,sexo:'F'}
+        ];
+        let tbody=document.querySelector('#janela tbody');
+        function mostrar(filtrarsexo=null){
+          tbody.innerHTML=``;
+          let dadosfiltrados=filtrarsexo?dados.filter(d=>d.sexo==filtrarsexo):dados;
+          dadosfiltrados.forEach(pessoa=>{
+          let tr=document.createElement('tr');
+          tr.innerHTML=`<td>${pessoa.nome}</td><td>${pessoa.idade}</td><td>${pessoa.sexo}</td>`;
+          tbody.appendChild(tr);
+          });
+        }
+        document.getElementById('btntodos').addEventListener('click',()=>mostrar());
+        document.getElementById('btnhomem').addEventListener('click',()=>mostrar('M'));
+        document.getElementById('btnmulher').addEventListener('click',()=>mostrar('F'));
+      </script>
+    </div>
+  </body>
+</html>
