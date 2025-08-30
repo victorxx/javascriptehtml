@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <style>
+      table{
+        width:90%;
+        margin:20px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,td{
+        border:1px solid #333;
+        padding:20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mostrardados" style="margin-top: 20px; text-align: center;">
+      <button id="mostrar" style="background-color: red ; padding:50px; border-radius: 20px;">
+        OK TRAGA OS NÚMEROS
+      </button>
+      <table border="10" id="janela">
+        <thead>
+          <tr><th>nome</th></tr>
+        </thead>
+        <tbody></tbody>
+        <script>
+          let dados=[
+          15, -3, 8, -7, 22, -4, 9
+          ];
+          let tbody=document.querySelector('#janela tbody');
+          function comecar(){
+            tbody.innerHTML=``;
+            let negativos=dados.filter(num=>num<0);
+            negativos.forEach(num=>{
+            let tr=document.createElement('tr');
+            tr.innerHTML=`<td>${num}</td>`;
+            tbody.appendChild(tr);
+            });
+
+          }
+          document.getElementById('mostrar').addEventListener('click',comecar);
+        </script>
+      </table>
+    </div>
+  </body>
+</html>
