@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Cookies com JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🍪 Gerenciador de Cookies</h2>
+
+  <button onclick="criarCookie()">Criar Cookie</button>
+  <button onclick="lerCookies()">Ler Cookies</button>
+  <button onclick="atualizarCookie()">Atualizar Cookie</button>
+  <button onclick="deletarCookie()">Deletar Cookie</button>
+  <button onclick="deletarTodosCookies()">Deletar Todos</button>
+
+  <pre id="resultado">Clique em um botão para começar...</pre>
+
+  <script>
+    function criarCookie() {
+      document.cookie = "usuario=Vitor; max-age=3600; path=/";
+      mostrar("Cookie 'usuario=Vitor' criado (expira em 1h)");
+    }
+
+    function lerCookies() {
+      mostrar("Cookies atuais:\n" + document.cookie);
+    }
+
+    function atualizarCookie() {
+      document.cookie = "usuario=Joao; max-age=3600; path=/";
+      mostrar("Cookie 'usuario' atualizado para 'Joao'");
+    }
+
+    function deletarCookie() {
+      document.cookie = "usuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      mostrar("Cookie 'usuario' deletado");
+    }
+
+    function deletarTodosCookies() {
+      const cookies = document.cookie.split(";");
+      for (let c of cookies) {
+        const eq = c.indexOf("=");
+        const nome = eq > -1 ? c.substring(0, eq).trim() : c.trim();
+        document.cookie = nome + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      }
+      mostrar("Todos os cookies visíveis foram apagados");
+    }
+
+    function mostrar(texto) {
+      document.getElementById("resultado").innerText = texto;
+    }
+  </script>
+
+</body>
+</html>
