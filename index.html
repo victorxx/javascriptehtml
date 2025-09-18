@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Tabela com Média</title>
+  <style>
+    .reprovado{
+        background-color: red;
+    }
+    .aprovado{
+        background-color:green;
+    }
+  </style>
 </head>
 <body>
   <h2>Notas de Alunos</h2>
@@ -28,8 +36,10 @@
     const tbody = document.querySelector("#tabela tbody");
 
     alunos.forEach(aluno => {
-      const status = aluno.nota >= 6 ? 'Aprovado' : 'Reprovado';
+      const status = aluno.nota >= 6 ? 'aprovado' : 'reprovado';
+      
       const linha = document.createElement("tr");
+      linha.classList.add(status);
       linha.innerHTML = `
         <td>${aluno.nome}</td>
         <td>${aluno.nota}</td>
